@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;700&display=swap');
 
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+ 
 * {
     box-sizing: border-box;
 }
@@ -9,11 +14,14 @@
 }
 
 body {
+    position: absolute;
     background-color: #F3F9FB;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     font-family: 'Nunito Sans', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 header {
@@ -29,7 +37,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 } 
 
 .links-menu {
@@ -72,14 +80,24 @@ nav {
     border-radius: 2px;
 }
 
-/*Quienes Somos*/
+/*Footer*/
 
-.nosotros-section {
-    margin: auto;
-    width: 85%;
+footer {
+    width: 100%;
+    margin-top: 2rem;
+    height: 6.5rem;
+    background-color: #113F67;
+    color: #F3F9FB;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-div {
+/*Quienes Somos - Esta seccion esta hecha para mobiles*/
+
+.nosotros-div-princ {
+    margin: auto;
+    width: 90%;
     border-radius: 5px 20px 5px;
     border: solid 10px #87c0cdab;
     font-size: 1.1em;
@@ -92,15 +110,70 @@ h1 {
 }
 
 .nos-img {
+    width: 100%;
+}
+
+.nosotros-div-logo {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-prov {
+    margin: auto;
+    width: 50%;
+}
+
+/*Productos*/
+.productos-lista {
+    margin:auto;
     width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto-titulo {
+    font-size: 1.3rem;
+    color: #113F67;
+    text-align: center;
+}
+
+.producto-img {
+    max-width:40%;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.producto-desc {
+    max-width: 25rem;
+    padding: 1rem;
+    border: 4px solid #87C0CD;
+    border-radius: 5px 20px 5px;
+}
+
+hr {
+    width: 70%;
+    margin-top: 2px;
+    border-color: #87C0CD;
+    display: none;
 }
 
 
 
-/*Mobile*/
+/*Responsive*/
 @media (max-width: 768px) {
     body {
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100%;
     }
 
     .burger-menu {
@@ -161,5 +234,113 @@ h1 {
 
     .bur-menu3.animado {
         transform: rotate(45deg) translate(-10px, -7px);
+    }
+
+    /*Footer*/
+    footer {
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+
+    footer span i {
+        font-size: 1rem;
+    }
+
+    .footer-separator {
+        display: none;
+    }
+
+
+    /*Contacto - Seccion para mobiles*/
+    form {
+        margin: auto;
+        width: 80%;
+        color: #113F67;
+    }
+
+    .form-group {
+        padding: 0.5rem 0 ;
+    }
+
+
+    input {
+        margin: auto;
+        width: 100%;
+        height: 1.8rem;
+        font-size: 14px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #87C0CD;
+    }
+
+    textarea {
+        margin-top: 5%;
+        width: 100%;
+        font-size: 18px;
+        height: 20vh;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 15px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #87C0CD;
+    }
+
+    .button-submit {
+        background-color: transparent;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 200;
+        border: 1px solid #113F67;
+        margin-left: 35%;
+        margin-right: 50%;
+        width: 30%;
+        height: 2.5rem;
+    }
+
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    .form-group span {
+        position: absolute;
+        right: 2.6rem;
+        color: red;
+        font-size: 14px;
+    }
+
+    .form-group span i{
+        color: #113F67;
+    }
+
+    /*Productos*/    
+    .producto {
+        max-width: 40rem;
+    }
+
+    hr {
+        display: block;
+    }
+
+       
+}
+
+@media (max-width: 1399px) and (min-width: 768px) {
+    .productos-lista {
+        justify-content: space-evenly;
+    }
+
+    .producto {
+        max-width: 40rem;
+    }
+
+    hr {
+        display: block;
+    }
+
+    .producto-desc {
+        max-width: 30rem;
+        padding: 1rem;
+        border: 4px solid #87C0CD;
+        border-radius: 5px 20px 5px;
     }
 }

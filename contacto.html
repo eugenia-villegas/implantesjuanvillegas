@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logomenor-removebg.png" type="image/icon type">
     <!--Iconos-->
     <script src="https://kit.fontawesome.com/21cd822ecc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Document</title>
+    <title>Juan F. Villegas</title>
 </head>
 <body>
     <header>
@@ -28,7 +29,51 @@
         </nav>
     </header>
 
+    <section class="contacto-section">
+        <h1>Contactanos!</h1>
+
+        <form action="">
+            <div class="form-group">
+                <label for="nombre">
+                    Nombre: <input type="text" placeholder="Juan" name="nombre" id="nombre" onkeyup="validarNom()"> 
+                 </label>
+                 <span id="error-nom"></span>
+            </div>
+            <div class="form-group">
+                <label for="apellido">
+                    Apellido: <input type="text" placeholder="Villegas" name="apellido" id="apellido" onkeyup="validarApel()">
+                </label>
+                <span id="error-apell"></span>
+            </div>
+            <div class="form-group">
+                <label for="celular">Telefono: </label>
+                <input type="tel" name="celular" placeholder="2615555555" id="celular" onkeyup="validarCel()"> 
+                <span id="error-cel"></span>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Su mensaje: </label>
+                <textarea name="mensaje" placeholder="Este es un mensaje para consultar..." id="mensaje" onkeyup="validarMje()"></textarea>
+                <span id="error-mje"></span>
+            </div>
+
+            <button class="button-submit" onclick="return validateForm()">Enviar</button>
+            <span id="error-submit"></span>
+        </form>
+    </section>
     
+    <footer>
+        <span>
+            <i class="fa-solid fa-envelope"></i> ortopediapanima@hotmail.com
+         </span>
+         <span class="footer-separator">||</span>
+         <span>
+             <i class="fa-solid fa-phone"></i> Tel/Fax: 423 9983
+         </span>
+         <span class="footer-separator">||</span>
+         <span>
+             <i class="fa-solid fa-location-dot"></i> Rioja 788 - Planta Alta - Ciudad, Mendoza.
+         </span>
+    </footer>
     <script src="./script/script.js"></script>
 </body>
 </html>
