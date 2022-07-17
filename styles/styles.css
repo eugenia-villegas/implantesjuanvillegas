@@ -80,6 +80,11 @@ nav {
     border-radius: 2px;
 }
 
+h1 {
+    color: #113F67;
+    text-align: center;
+}
+
 /*Footer*/
 
 footer {
@@ -100,22 +105,17 @@ footer {
     width: 90%;
     border-radius: 5px 20px 5px;
     border: solid 10px #87c0cdab;
-    font-size: 1.1em;
+    font-size: 1.3em;
     padding: 25px; 
 }
 
-h1 {
-    color: #113F67;
-    text-align: center;
-}
-
 .nos-img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .nosotros-div-logo {
-    margin: auto;
     width: 80%;
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
@@ -132,7 +132,7 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .producto-titulo {
@@ -143,13 +143,13 @@ h1 {
 
 .producto-img {
     max-width:40%;
+    filter: drop-shadow(2px 2px 3px #226597);
 }
 
 .producto {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
 }
 
 .producto-desc {
@@ -166,6 +166,74 @@ hr {
     display: none;
 }
 
+/*Contacto*/
+.contacto-par {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+form {
+    margin: auto;
+    width: 40%;
+    color: #113F67;
+}
+
+.form-group {
+    padding: 0.5rem 0 ;
+}
+
+input {
+    margin: auto;
+    width: 100%;
+    outline: 0;
+    height: 1.8rem;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #87C0CD;
+}
+
+textarea {
+    margin-top: 5%;
+    width: 100%;
+    font-size: 18px;
+    height: 20vh;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #87C0CD;
+}
+
+.button-submit {
+    background-color: transparent;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 200;
+    border: 1px solid #113F67;
+    margin-left: 35%;
+    margin-right: 50%;
+    width: 30%;
+    height: 2.5rem;
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+.form-group span {
+    position: absolute;
+    right: 16rem;
+    color: red;
+    font-size: 14px;
+}
+
+
+.form-group span i{
+    color: #113F67;
+}
 
 
 /*Responsive*/
@@ -250,51 +318,39 @@ hr {
         display: none;
     }
 
+    /*Nosotros*/
+    .nos-img {
+        width: 100%;
+    }
+
+    .nosotros-div-princ {
+        margin: auto;
+        width: 90%;
+        border-radius: 5px 20px 5px;
+        border: solid 10px #87c0cdab;
+        font-size: 1.3em;
+        padding: 25px; 
+    }
+
+    .nosotros-div-logo {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+    }
 
     /*Contacto - Seccion para mobiles*/
+    .contacto-par {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 2%;
+    }
+
     form {
         margin: auto;
         width: 80%;
         color: #113F67;
-    }
-
-    .form-group {
-        padding: 0.5rem 0 ;
-    }
-
-
-    input {
-        margin: auto;
-        width: 100%;
-        height: 1.8rem;
-        font-size: 14px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #87C0CD;
-    }
-
-    textarea {
-        margin-top: 5%;
-        width: 100%;
-        font-size: 18px;
-        height: 20vh;
-        font-family: 'Nunito Sans', sans-serif;
-        font-size: 15px;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #87C0CD;
-    }
-
-    .button-submit {
-        background-color: transparent;
-        border-radius: 30px;
-        font-size: 1rem;
-        font-weight: 200;
-        border: 1px solid #113F67;
-        margin-left: 35%;
-        margin-right: 50%;
-        width: 30%;
-        height: 2.5rem;
     }
 
     ::placeholder{
@@ -302,8 +358,7 @@ hr {
     }
 
     .form-group span {
-        position: absolute;
-        right: 2.6rem;
+        right: 3.6rem;
         color: red;
         font-size: 14px;
     }
@@ -312,7 +367,37 @@ hr {
         color: #113F67;
     }
 
-    /*Productos*/    
+    /*Nosotros*/
+    .nosotros-div-princ {
+        margin: auto;
+        width: 90%;
+        border-radius: 5px 20px 5px;
+        border: solid 10px #87c0cdab;
+        font-size: 1.3em;
+        padding: 25px; 
+    }
+    
+    .nos-img {
+        max-width: 100%;
+    }
+    
+    .nosotros-div-logo {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .logo-prov {
+        margin: auto;
+        width: 7rem;
+    }
+
+    /*Productos*/ 
+    .productos-lista {
+        justify-content: center;
+    }
+    
     .producto {
         max-width: 40rem;
     }

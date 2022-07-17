@@ -78,11 +78,9 @@ function validarCel() {
 
 function validarMje(){
     let mensaje = document.getElementById('mensaje').value;
-    let required = 30;
-    let left = required - mensaje.length;
     /*Validation for when its empty*/
-    if (left > 0) {
-        mjeError.innerHTML = left + ' more characters required';
+    if (mensaje == "") {
+        mjeError.innerHTML = 'Por favor escribir un mensaje';
         return false;
     };
     
