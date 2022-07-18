@@ -99,25 +99,53 @@ footer {
 }
 
 /*Quienes Somos - Esta seccion esta hecha para mobiles*/
+.par1 {
+    grid-area: par1;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.par2 {
+    grid-area: par2;
+}
+
+.par3 {
+    grid-area: par3;
+}
+
+
 
 .nosotros-div-princ {
     margin: auto;
-    width: 90%;
+    width: 65%;
+    padding: 3%;
     border-radius: 5px 20px 5px;
     border: solid 10px #87c0cdab;
-    font-size: 1.3em;
-    padding: 25px; 
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "par1 par1"    
+        "img1 img1"
+        "par2 par2"
+        "par3 par3"
+        "logos logos";
 }
 
 .nos-img {
     max-width: 100%;
+    border-radius: 5px 20px 5px;
 }
 
 .nosotros-div-logo {
-    width: 80%;
+    width: 40%;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    grid-area: logos;
 }
 
 .logo-prov {
@@ -130,9 +158,9 @@ footer {
     margin:auto;
     width: 90%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .producto-titulo {
@@ -163,7 +191,6 @@ hr {
     width: 70%;
     margin-top: 2px;
     border-color: #87C0CD;
-    display: none;
 }
 
 /*Contacto*/
@@ -176,7 +203,7 @@ hr {
 
 form {
     margin: auto;
-    width: 40%;
+    width: 650px;
     color: #113F67;
 }
 
@@ -224,8 +251,6 @@ textarea {
 }
 
 .form-group span {
-    position: absolute;
-    right: 16rem;
     color: red;
     font-size: 14px;
 }
@@ -339,6 +364,29 @@ textarea {
         justify-content: space-around;
     }
 
+    /*Nosotros*/
+    .nosotros-div-princ {
+        margin: auto;
+        width: 90%;
+        padding: 25px; 
+    }
+    
+    .nos-img {
+        max-width: 100%;
+    }
+    
+    .nosotros-div-logo {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .logo-prov {
+        margin: auto;
+        width: 50%;
+    }
+
     /*Contacto - Seccion para mobiles*/
     .contacto-par {
         width: 80%;
@@ -358,6 +406,7 @@ textarea {
     }
 
     .form-group span {
+        position: absolute;
         right: 3.6rem;
         color: red;
         font-size: 14px;
@@ -366,6 +415,7 @@ textarea {
     .form-group span i{
         color: #113F67;
     }
+    
 
     /*Nosotros*/
     .nosotros-div-princ {
@@ -408,6 +458,8 @@ textarea {
 
        
 }
+
+
 
 @media (max-width: 1399px) and (min-width: 768px) {
     .productos-lista {
