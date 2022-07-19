@@ -98,7 +98,21 @@ footer {
     justify-content: space-evenly;
 }
 
-/*Quienes Somos - Esta seccion esta hecha para mobiles*/
+.footer-link {
+    text-decoration: none;
+    color: #F3F9FB;
+}
+
+.footer-span:hover {
+    font-size: large;
+    color: #87C0CD;
+}
+
+.footer-link:hover {
+    color: #87C0CD;
+}
+
+/*Quienes Somos*/
 .par1 {
     grid-area: par1;
 }
